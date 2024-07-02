@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "img": "https://images.dinosaurpictures.org/tyrannosaurus_1_6c56.jpg",
+    "name": "Tyrannosaurus Rex",
+    "weight": "8000 kg",
+    "era": "Late Cretaceous",
+    "type": "carnivore",
+    "description": "Tyrannosaurus Rex, often abbreviated to T. rex, was one of the largest land carnivores of all time. It had a massive skull balanced by a long, heavy tail."
+  },
+  {
+    "id": 2,
+    "img": "https://images.dinosaurpictures.org/1037-Triceratops_ecf8.jpg",
+    "name": "Triceratops",
+    "weight": "6000 kg",
+    "era": "Late Cretaceous",
+    "type": "herbivore",
+    "description": "Triceratops was a large herbivorous dinosaur known for its three distinct facial horns and large bony frill at the back of its head."
+  },
+  {
+    "id": 3,
+    "img": "https://images.dinosaurpictures.org/stegosaurus_1e3b.jpg",
+    "name": "Stegosaurus",
+    "weight": "3100 kg",
+    "era": "Late Jurassic",
+    "type": "herbivore",
+    "description": "Stegosaurus is easily recognized by the distinctive double row of kite-shaped plates rising vertically along its arched back and the two pairs of long spikes extending horizontally near the end of its tail."
+  },
+  {
+    "id": 4,
+    "img": "https://images.dinosaurpictures.org/velociraptor-small_e8d8.jpg",
+    "name": "Velociraptor",
+    "weight": "15 kg",
+    "era": "Late Cretaceous",
+    "type": "carnivore",
+    "description": "Velociraptor was a small, fast, and agile carnivorous dinosaur, known for its sharp claws and believed to have been covered in feathers."
+  },
+  {
+    "id": 5,
+    "img": "https://images.dinosaurpictures.org/tyrannosaurus_1_6c56.jpg",
+    "name": "Brachiosaurus",
+    "weight": "56000 kg",
+    "era": "Late Jurassic",
+    "type": "herbivore",
+    "description": "Brachiosaurus was a massive herbivorous dinosaur with long neck and forelimbs, allowing it to reach high vegetation, unlike most other sauropods."
+  },
+  {
+    "id": 6,
+    "img": "https://images.dinosaurpictures.org/spinosaurus_aegyptiacus_by_wretchedspawn2012-d62if7v_978b.jpg",
+    "name": "Spinosaurus",
+    "weight": "7500 kg",
+    "era": "Early Cretaceous",
+    "type": "carnivore",
+    "description": "Spinosaurus was one of the largest carnivorous dinosaurs, easily identified by its distinctive sail-like structure formed by elongated spines on its back."
+  },
+  {
+    "id": 7,
+    "img": "https://images.dinosaurpictures.org/tyrannosaurus_1_6c56.jpg",
+    "name": "Ankylosaurus",
+    "weight": "6000 kg",
+    "era": "Late Cretaceous",
+    "type": "herbivore",
+    "description": "Ankylosaurus was a heavily armored herbivorous dinosaur with a large club-like structure at the end of its tail, used for defense against predators."
+  },
+  {
+    "id": 8,
+    "img": "https://images.dinosaurpictures.org/Allosaurus4_d8ad.jpg",
+    "name": "Allosaurus",
+    "weight": "2000 kg",
+    "era": "Late Jurassic",
+    "type": "carnivore",
+    "description": "Allosaurus was a large carnivorous dinosaur known for its powerful jaws filled with sharp teeth, making it one of the top predators of its time."
+  },
+  {
+    "id": 9,
+    "img": "https://images.dinosaurpictures.org/tyrannosaurus_1_6c56.jpg",
+    "name": "Diplodocus",
+    "weight": "14000 kg",
+    "era": "Late Jurassic",
+    "type": "herbivore",
+    "description": "Diplodocus was a long-necked, whip-tailed giant and one of the longest dinosaurs known, with a distinctive row of spines along its back."
+  },
+  {
+    "id": 10,
+    "img": "https://images.dinosaurpictures.org/tyrannosaurus_1_6c56.jpg",
+    "name": "Iguanodon",
+    "weight": "3500 kg",
+    "era": "Early Cretaceous",
+    "type": "herbivore",
+    "description": "Iguanodon was a large herbivorous dinosaur that could walk on both two and four legs and is known for its large thumb spikes, which were likely used for defense."
+  }
+]
