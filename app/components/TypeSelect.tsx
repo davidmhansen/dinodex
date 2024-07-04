@@ -10,7 +10,6 @@ export default function TypeSelect({ type, setType }: TypeSelectProps) {
     <div>
       <select
         value={type}
-        defaultValue=""
         onChange={(e: ChangeEvent<HTMLSelectElement>) => {
           setType(e.target.value);
         }}

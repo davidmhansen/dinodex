@@ -1,12 +1,29 @@
 import { Dinosaur as DinosaurType } from "../../../types";
-import data from "../../../data/dinosaurs.json";
+import Image from "next/image";
 
-export default function DinosaurDetail({
+// fetch dinosaur data from own api endpoint
+async function getData(): Promise<any> {
+  const res = await fetch("http:localhost:3000/api/dinosaurs", {
+    cache: "reload",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
+
+  return res.json();
+}
+
+export default async function DinosaurDetail({
   params,
 }: {
   params: { name: string };
 }) {
-  let dinosaur = data.find(
+  // get dinosaur data from DB
+  const dinosaurData = await getData();
+
+  // check path for matching dinosaur
+  let dinosaur = dinosaurData.find(
     (dino: DinosaurType) =>
       dino.name.toLowerCase().replace(/\s+/g, "-") === params.name
   );
@@ -16,11 +33,14 @@ export default function DinosaurDetail({
   }
 
   return (
-    <div className="rounded-md p-6">
-      <p>
+    <div className="rounded-md p-6 border max-w-[450px]">
+      <div className="w-full h-[300px] relative rounded-md overflow-hidden mb-4">
+        <Image src={dinosaur?.image} alt={dinosaur?.name} fill></Image>
+      </div>
+      <h1>
         <strong>Name: </strong>
         {dinosaur?.name}
-      </p>
+      </h1>
       <p>
         <strong>Era: </strong>
         {dinosaur?.era}

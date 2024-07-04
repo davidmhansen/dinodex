@@ -19,10 +19,13 @@ export default function SearchBar({
 
   return (
     <div>
-      <label htmlFor="search">Suche:</label>
+      <label htmlFor="search" className="mr-2">
+        Suche:
+      </label>
       <input
         type="text"
         name="search"
+        className="border p-2 rounded-md w-[300px]"
         value={searchString}
         placeholder={placeholderText}
         onChange={handleChange}

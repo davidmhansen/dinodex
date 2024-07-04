@@ -1,6 +1,6 @@
 export interface Dinosaur {
   id: number;
-  img: string;
+  image: string;
   name: string;
   weight: string;
   era: string;

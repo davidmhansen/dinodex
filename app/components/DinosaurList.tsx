@@ -1,14 +1,15 @@
 "use client";
 
-import data from "../../data/dinosaurs.json";
+// import data from "../../data/dinosaurs.json";
 import Dinosaur from "./Dinosaur";
 import { Dinosaur as DinosaurType } from "../../types";
 
 import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import TypeSelect from "./TypeSelect";
+import Link from "next/link";
 
-export default function DinosaurList() {
+export default function DinosaurList({ data }: { data: Array<DinosaurType> }) {
   const [dinosNew, setDinosNew] = useState<DinosaurType[]>(data);
   const [type, setType] = useState("all");
   const [searchString, setSearchString] = useState("");
@@ -32,13 +33,18 @@ export default function DinosaurList() {
 
   return (
     <div>
-      <TypeSelect type={type} setType={setType}></TypeSelect>
-      <SearchBar
-        placeholderText="Search Dinosaurs"
-        searchString={searchString}
-        setSearchString={setSearchString}
-      ></SearchBar>
-      <div className="flex flex-wrap gap-4">
+      <div className="flex gap-8 items-center justify-center mb-6">
+        <TypeSelect type={type} setType={setType}></TypeSelect>
+        <SearchBar
+          placeholderText="Search Dinosaurs"
+          searchString={searchString}
+          setSearchString={setSearchString}
+        ></SearchBar>
+        <Link href={"/supabase"} className="">
+          Supabase Data
+        </Link>
+      </div>
+      <div className="flex flex-wrap gap-4 items-stretch">
         {dinosNew.map((dino: DinosaurType, index: number) => (
           <Dinosaur key={index} dino={dino}></Dinosaur>
         ))}
