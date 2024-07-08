@@ -3,7 +3,7 @@ import { Dinosaur as DinosaurType } from "../types";
 
 async function getData() {
   // * Fetch dinosaurs from API
-  const res = await fetch("http://localhost:3000/api/dinosaurs");
+  const res = await fetch("/api/dinosaurs");
 
   // * Optionally handle the error
   if (!res.ok) {
