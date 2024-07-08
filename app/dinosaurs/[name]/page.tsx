@@ -1,7 +1,8 @@
 import { Dinosaur as DinosaurType } from "../../../types";
 import Image from "next/image";
 
-// fetch dinosaur data from own api endpoint
+// * fetch dinosaur data from own api endpoint
+// ? Maybe rewrite the getData call to just get the requested dinosaur with the id and not all dinosaurs and filter them later
 async function getData(): Promise<any> {
   const res = await fetch("http:localhost:3000/api/dinosaurs", {
     cache: "reload",
@@ -19,10 +20,10 @@ export default async function DinosaurDetail({
 }: {
   params: { name: string };
 }) {
-  // get dinosaur data from DB
+  // * get dinosaur data from DB
   const dinosaurData = await getData();
 
-  // check path for matching dinosaur
+  // * check path for matching dinosaur
   let dinosaur = dinosaurData.find(
     (dino: DinosaurType) =>
       dino.name.toLowerCase().replace(/\s+/g, "-") === params.name

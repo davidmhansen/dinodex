@@ -1,13 +1,11 @@
 "use client";
 
-// import data from "../../data/dinosaurs.json";
 import Dinosaur from "./Dinosaur";
 import { Dinosaur as DinosaurType } from "../../types";
 
 import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import TypeSelect from "./TypeSelect";
-import Link from "next/link";
 
 export default function DinosaurList({ data }: { data: Array<DinosaurType> }) {
   const [dinosNew, setDinosNew] = useState<DinosaurType[]>(data);
@@ -15,12 +13,17 @@ export default function DinosaurList({ data }: { data: Array<DinosaurType> }) {
   const [searchString, setSearchString] = useState("");
 
   useEffect(() => {
+    // * Start with original data
     let filteredDinos = data;
+
+    // * Filter by type if type is not "all"
     if (type !== "all") {
       filteredDinos = filteredDinos.filter(
         (dino: DinosaurType) => dino.type === type
       );
     }
+
+    // * Filter by search string
     if (searchString) {
       filteredDinos = filteredDinos.filter((dino: DinosaurType) =>
         Object.values(dino).some((value) =>
@@ -40,9 +43,6 @@ export default function DinosaurList({ data }: { data: Array<DinosaurType> }) {
           searchString={searchString}
           setSearchString={setSearchString}
         ></SearchBar>
-        <Link href={"/supabase"} className="">
-          Supabase Data
-        </Link>
       </div>
       <div className="flex flex-wrap gap-4 items-stretch">
         {dinosNew.map((dino: DinosaurType, index: number) => (
