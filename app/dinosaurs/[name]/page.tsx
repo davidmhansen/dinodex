@@ -4,7 +4,7 @@ import Image from "next/image";
 // * fetch dinosaur data from own api endpoint
 // ? Maybe rewrite the getData call to just get the requested dinosaur with the id and not all dinosaurs and filter them later
 async function getData(): Promise<any> {
-  const res = await fetch("/api/dinosaurs", {
+  const res = await fetch("http://localhost:3000/api/dinosaurs", {
     cache: "reload",
   });
 
