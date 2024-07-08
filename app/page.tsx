@@ -1,9 +1,10 @@
 import DinosaurList from "./components/DinosaurList";
 import { Dinosaur as DinosaurType } from "../types";
+import parseUrl from "@/utils/parse-url";
 
 async function getData() {
   // * Fetch dinosaurs from API
-  const res = await fetch("http://localhost:3000/api/dinosaurs");
+  const res = await fetch(`${parseUrl("http://localhost:3000/api/dinosaurs")}`);
 
   // * Optionally handle the error
   if (!res.ok) {

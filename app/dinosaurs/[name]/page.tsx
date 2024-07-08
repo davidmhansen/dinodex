@@ -1,12 +1,16 @@
 import { Dinosaur as DinosaurType } from "../../../types";
 import Image from "next/image";
+import parseUrl from "@/utils/parse-url";
 
 // * fetch dinosaur data from own api endpoint
 // ? Maybe rewrite the getData call to just get the requested dinosaur with the id and not all dinosaurs and filter them later
 async function getData(): Promise<any> {
-  const res = await fetch("http://localhost:3000/api/dinosaurs", {
-    cache: "reload",
-  });
+  const res = await fetch(
+    `${parseUrl("http://localhost:3000/api/dinosaurs")}`,
+    {
+      cache: "reload",
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed");
