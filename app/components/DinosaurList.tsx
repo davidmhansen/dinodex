@@ -32,7 +32,7 @@ export default function DinosaurList({ data }: { data: Array<DinosaurType> }) {
       );
     }
     setDinosNew(filteredDinos);
-  }, [type, searchString]);
+  }, [data, type, searchString]);
 
   return (
     <div>
