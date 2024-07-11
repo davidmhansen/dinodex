@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 import SearchBar from "./SearchBar";
 import TypeSelect from "./TypeSelect";
 
+// * Set options for TypeSelect component
+const options = ["All", "Herbivore", "Carnivore"];
+
 export default function DinosaurList({ data }: { data: Array<DinosaurType> }) {
   const [dinosNew, setDinosNew] = useState<DinosaurType[]>(data);
   const [type, setType] = useState("all");
@@ -37,7 +40,11 @@ export default function DinosaurList({ data }: { data: Array<DinosaurType> }) {
   return (
     <div>
       <div className="flex gap-8 items-center justify-center mb-6">
-        <TypeSelect type={type} setType={setType}></TypeSelect>
+        <TypeSelect
+          type={type}
+          setType={setType}
+          options={options}
+        ></TypeSelect>
         <SearchBar
           placeholderText="Search Dinosaurs"
           searchString={searchString}

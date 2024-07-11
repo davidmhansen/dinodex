@@ -3,11 +3,11 @@ export interface InternalUrl {
   origin: string;
   /** @default "localhost:3000" */
   host: string;
-  /** @default "/api/auth" */
+  /** @default "/api/dinosaurs" */
   path: string;
-  /** @default "http://localhost:3000/api/auth" */
+  /** @default "http://localhost:3000/api/dinosaurs" */
   base: string;
-  /** @default "http://localhost:3000/api/auth" */
+  /** @default "http://localhost:3000/api/dinosaurs" */
   toString: () => string;
 }
 

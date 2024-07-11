@@ -1,11 +1,16 @@
 import { ChangeEvent } from "react";
 
 interface TypeSelectProps {
+  options: Array<string>;
   type: string;
   setType: (type: string) => void;
 }
 
-export default function TypeSelect({ type, setType }: TypeSelectProps) {
+export default function TypeSelect({
+  type,
+  setType,
+  options,
+}: TypeSelectProps) {
   return (
     <div>
       <select
@@ -14,9 +19,9 @@ export default function TypeSelect({ type, setType }: TypeSelectProps) {
           setType(e.target.value);
         }}
       >
-        <option value="all">All</option>
-        <option value="herbivore">Herbivore</option>
-        <option value="carnivore">Carnivore</option>
+        {options.map((option) => (
+          <option value={option.toLowerCase()}>{option}</option>
+        ))}
       </select>
     </div>
   );
